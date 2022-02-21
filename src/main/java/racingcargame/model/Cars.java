@@ -11,7 +11,7 @@ public class Cars {
     private final List<Car> cars = new ArrayList<>();
 
     public Cars(List<String> carNames) {
-        carNames.forEach(name -> cars.add(new Car(name, START_POSITION)));
+        carNames.forEach(name -> cars.add(new Car(new Name(name), new Position(START_POSITION))));
     }
 
     void moveCars() {

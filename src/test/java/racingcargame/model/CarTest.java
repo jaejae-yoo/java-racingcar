@@ -12,7 +12,7 @@ class CarTest {
     @DisplayName("자동차 이동 확인")
     @CsvSource(value = {"3:0", "4:1", "9:1"}, delimiter = ':')
     void checkCarMode(int number, int expect) {
-        Car car = new Car("green", 0);
+        Car car = new Car(new Name("green"), new Position(0));
         car.move(number);
 
         assertThat(car.getPosition()).isEqualTo(expect);
