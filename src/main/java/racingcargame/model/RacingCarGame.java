@@ -16,7 +16,7 @@ public class RacingCarGame {
     private static final String CAR_NAME_DELIMITER = ",";
 
     private final RaceCount raceCount;
-    private Cars carRepository;
+    private final Cars carRepository;
 
     public RacingCarGame(String carNames, String raceCount) {
         validateRaceCount(raceCount);

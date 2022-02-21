@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.List;
 
 public class InputValidator {
-    public static final String ERROR_NUMBER_RIGHT_FORMAT = "[error] 숫자를 입력해주세요.";
+    private static final String ERROR_NUMBER_RIGHT_FORMAT = "[error] 숫자를 입력해주세요.";
     private static final String COMMA_DELIMITER = ",";
     private static final String COLON_DELIMITER = ":";
     private static final int NUMBER = 0;
