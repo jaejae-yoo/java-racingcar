@@ -1,5 +1,7 @@
 package racingcargame.model;
 
+import java.util.Objects;
+
 public class Car implements Comparable<Car> {
     private static final int MINIMUM_MOVE_ACCESSIBLE = 4;
 
@@ -24,6 +26,19 @@ public class Car implements Comparable<Car> {
     @Override
     public int compareTo(Car car) {
         return Integer.compare(position, car.getPosition());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return position == car.position && Objects.equals(name, car.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, position);
     }
 
     String getName(){
